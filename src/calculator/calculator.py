@@ -30,7 +30,7 @@ class Calculator:
         """ Getter de l'attribut __y de la calculatrice """
         return self.__y
 
-    def set_y(self, new_y: int) -> none:
+    def set_y(self, new_y: int) -> None:
         """ Setter de l'attribut __y de la calculatrice """
         self.__y = new_y
 
