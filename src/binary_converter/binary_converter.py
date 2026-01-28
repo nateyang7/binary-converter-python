@@ -25,6 +25,20 @@ class BinaryConverter:
     def set_integer(self, new_integer: int) -> None:
         self.n = new_integer
 
+    def nat_bin(self) -> str:
+        """
+        Converts a natural integer to binary.
+
+        Returns:
+            str: String of the natural integer converted to binary
+        """
+        bits: str = ''
+        n: int = self.get_integer()
+        while n / 2 != 0:
+            bits += str(n % 2)
+            n //= 2
+        return bits[::-1]
+
     def bin(self) -> str:
         """
         Converts an integer to binary.
@@ -35,12 +49,6 @@ class BinaryConverter:
         Examples:
             >>>
         """
-        bits: str = ''
-        n: int = self.get_integer()
-        while n / 2 != 0:
-            bits += str(n % 2)
-            n //= 2
-        return bits[::-1]
         
     def oct(self) -> str:
         """
