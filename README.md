@@ -1,9 +1,20 @@
-# Calculatrice simple en Python
+# Calculator in Python
 
-## Présentation
-Simple calculatrice avec GUI en python
+## Introduction
+**calculator-python** is an utility tool in cli able to calculate and convert.
 
-## Structure
-- src : Code source
-- docs : Documentation
-- tests : Tests
+## Table of contents
+- [Features](##Features)
+
+## Features
+### General
+- [] Able to swap between various modes
+
+## Mode calculator
+- [] Calculate integers
+- [] Calculate real numbers
+- [] Calculate complex numbers
+
+## Mode converter
+- [] Convert an integer in binary with two's complement method
+- [] Convert a real number in binary with IEEE 754 standardization
