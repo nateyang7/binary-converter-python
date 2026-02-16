@@ -1,8 +1,5 @@
 """
 Author: Nathan Yang
-
-TO-DO:
-    - [] Can convert integers with two's complement
 """
 
 class BinaryConverter:
@@ -92,13 +89,8 @@ class BinaryConverter:
         bits_list: list[int] = self.nat_bin()
         while len(bits_list) != bits:  # Fill bits to get the size required
             bits_list.insert(0)
-        print(bits_list)
         self.set_bits(bits_list)
         self.reverse_bits()
-
-
-
-
         
     def oct(self) -> str:
         """

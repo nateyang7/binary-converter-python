@@ -19,3 +19,12 @@ def test_integer_to_binary(binary_converter):
     ...
 """
 
+def test_oct(binary_converter: BinaryConverter):
+    binary_converter.set_integer(10)
+    assert binary_converter.oct() == '0o12'
+
+
+def test_oct(binary_converter: BinaryConverter):
+    binary_converter.set_integer(26)
+    assert binary_converter.hex() == '0x1A'
+

@@ -11,7 +11,7 @@ binary.
 - [Usage](##Usage)
 
 ## Features
-- [] Convert a natural integer
+- [X] Convert a natural integer
 - [] Convert an integer in binary with two's complement method
 - [] Convert a real number with IEEE 754 with simple / double accuracy
 - [] Convert a complex number
