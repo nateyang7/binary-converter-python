@@ -2,7 +2,8 @@
 
 ## Introduction
 **binary-converter-python** is a command-line utility designed to convert 
-integers into binary format.
+integers into binary format. This project serves as an educational exercice 
+focused on data encoding.
 
 ## Table of contents
 - [Features](##Features)
@@ -11,10 +12,10 @@ integers into binary format.
 - [Usage](##Usage)
 
 ## Features
-- [X] Convert a natural integer
-- [] Convert an integer in binary with two's complement method
-- [] Convert a real number with IEEE 754 with simple / double accuracy
-- [] Convert a complex number
+- [X] Convert natural integers
+- [] Convert integers in binary with two's complement method
+- [] Convert real numbers with IEEE 754 with simple / double accuracy
+- [] Convert complex numbers.
 
 ## Requirements
 - python3
