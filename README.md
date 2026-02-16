@@ -13,9 +13,9 @@ focused on data encoding.
 
 ## Features
 - [X] Convert natural integers
-- [] Convert integers in binary with two's complement method
-- [] Convert real numbers with IEEE 754 with simple / double accuracy
-- [] Convert complex numbers.
+- [/] Convert integers in binary with two's complement method
+- [/] Convert real numbers with IEEE 754 with simple / double accuracy
+- [/] Convert complex numbers.
 
 ## Requirements
 - python3
