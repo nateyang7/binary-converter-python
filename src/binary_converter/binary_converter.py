@@ -10,11 +10,11 @@ class BinaryConverter:
         __n (int): Integer to convert. (DEFAULT: 0)
     """
 
-    def __init__(self) -> None:
+    def __init__(self, n_init: int = 0) -> None:
         """
         Initializes the binary converter.
         """
-        self.__n = 0
+        self.__n = n_init
         self.__bits = [0]
 
     def get_integer(self) -> int:
@@ -80,5 +80,5 @@ class BinaryConverter:
         ...
 
     def __repr__(self) -> str:
-        ...
+        return f"BIN: {self.bin()}"
 
