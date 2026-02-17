@@ -7,7 +7,7 @@ class BinaryConverter:
     Class representing a binary converter.
 
     Attributes:
-        __n (int): Integer to convert. (DEFAULT: 0)
+        __n (int): Integer to convert (DEFAULT: 0).
     """
     DIGITS: list = [str(digit) for digit in range(10)] + [chr(digit) for digit in range(65, 71)]
     BASE_DIGITS: dict = {n: digit for n, digit in enumerate(DIGITS)}
@@ -31,7 +31,7 @@ class BinaryConverter:
     def set_bits(self, new_bits: list[int]) -> None:
         self.__bits = new_bits
 
-    def convert_to_base(b: int) -> str:
+    def convert_to_base(self, b: int) -> str:
         """
         Converts the current integer in a specific base.
 
@@ -48,12 +48,10 @@ class BinaryConverter:
         """
         n: int = self.get_integer()
         remainders: list[int] = []
-        while n / base != 0:
-            remainders.append(integer %  base)
-            n //= base
-        return ''.join(BASE_DIGITS[remainder] for remainder in remainders[::-1])
-
-
+        while n / b != 0:
+            remainders.append(n %  b)
+            n //= b
+        return ''.join(self.BASE_DIGITS[remainder] for remainder in remainders[::-1])
 
     def bin(self) -> str:
         """
@@ -68,12 +66,7 @@ class BinaryConverter:
             >>> b.bin()
             '1010'
         """
-        n: int = self.get_integer()
-        bits: list[int] = []
-        while n / 2 != 0:
-            bits.append(n % 2)
-            n //= 2
-        return ''.join(str(bit) for bit in bits[::-1])
+        return self.convert_to_base(2)
         
     def oct(self) -> str:
         """
@@ -88,7 +81,7 @@ class BinaryConverter:
             >>> b.oct()
             '377'
         """
-        ...
+        return self.convert_to_base(8)
 
     def hex(self) -> str:
         """
@@ -103,10 +96,8 @@ class BinaryConverter:
             >>> b.hex()
             '1A'
         """
-        ...
+        return self.convert_to_base(16)
 
     def __repr__(self) -> str:
-        return f"BIN: {self.bin()}"
+        return f"BIN: {self.bin()}\nOCT: {self.oct()}\nHEX: {self.hex()}"
 
-
-print(BinaryConverter().BASE_DIGITS)
