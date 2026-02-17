@@ -9,6 +9,8 @@ class BinaryConverter:
     Attributes:
         __n (int): Integer to convert. (DEFAULT: 0)
     """
+    DIGITS: list = [str(digit) for digit in range(10)] + [chr(digit) for digit in range(65, 71)]
+    BASE_DIGITS: dict = {n: digit for n, digit in enumerate(DIGITS)}
 
     def __init__(self, n_init: int = 0) -> None:
         """
@@ -28,6 +30,30 @@ class BinaryConverter:
 
     def set_bits(self, new_bits: list[int]) -> None:
         self.__bits = new_bits
+
+    def convert_to_base(b: int) -> str:
+        """
+        Converts the current integer in a specific base.
+
+        Args:
+            b (int): Base to convert into.
+
+        Returns
+            str: Current integer convert to base b
+
+        Examples:
+            >>> b = BinaryConverter(15)
+            >>> b.convert_to_base(16)
+            'F'
+        """
+        n: int = self.get_integer()
+        remainders: list[int] = []
+        while n / base != 0:
+            remainders.append(integer %  base)
+            n //= base
+        return ''.join(BASE_DIGITS[remainder] for remainder in remainders[::-1])
+
+
 
     def bin(self) -> str:
         """
@@ -82,3 +108,5 @@ class BinaryConverter:
     def __repr__(self) -> str:
         return f"BIN: {self.bin()}"
 
+
+print(BinaryConverter().BASE_DIGITS)
