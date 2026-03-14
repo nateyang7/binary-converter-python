@@ -2,12 +2,15 @@
 
 class BinaryConverter:
     """
-    Class representing a binary converter.
+    Represents a binary converter.
 
     Attributes:
         __n (int): Integer to convert (DEFAULT: 0).
     """
-    DIGITS: list = [str(digit) for digit in range(10)] + [chr(digit) for digit in range(65, 71)]
+    DIGITS: list[str] = (
+            [str(digit) for digit in range(10)] + 
+            [chr(digit) for digit in range(65, 71)]
+            )
     BASE_DIGITS: dict = {n: digit for n, digit in enumerate(DIGITS)}
 
     def __init__(self, n: int = 0) -> None:
@@ -27,7 +30,7 @@ class BinaryConverter:
     
     @n.setter
     def n(self, new_n: int) -> None:
-        if  not isinstance(new_n, int):
+        if not isinstance(new_n, int):
             raise TypeError('Not an integer')
         self.__n = new_n
     
@@ -108,5 +111,5 @@ class BinaryConverter:
         return self.convert_to_base(16)
 
     def __repr__(self) -> str:
-        return f"BIN: {self.bin()}\nOCT: {self.oct()}\nHEX: {self.hex()}"
+        return f'BIN: {self.bin()}\nOCT: {self.oct()}\nHEX: {self.hex()}'
 
