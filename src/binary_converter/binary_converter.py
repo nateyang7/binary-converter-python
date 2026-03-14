@@ -1,6 +1,4 @@
-"""
-Author: Nathan Yang
-"""
+# src/binary_converter/binary_converter.py
 
 class BinaryConverter:
     """
@@ -12,25 +10,36 @@ class BinaryConverter:
     DIGITS: list = [str(digit) for digit in range(10)] + [chr(digit) for digit in range(65, 71)]
     BASE_DIGITS: dict = {n: digit for n, digit in enumerate(DIGITS)}
 
-    def __init__(self, n_init: int = 0) -> None:
+    def __init__(self, n: int = 0) -> None:
         """
         Initializes the binary converter.
+
+        Args:
+            n (int): Integer to convert.
         """
-        self.__n = n_init
-        self.__bits = [0]
-
-    def get_integer(self) -> int:
+        self.__n = n
+        self.__bits = [0, ]
+    
+    # === Getters/Setters ===
+    @property
+    def n(self) -> int:
         return self.__n
-
-    def set_integer(self, new_integer: int) -> None:
-        self.__n = new_integer
-
-    def get_bits(self) -> list[int]:
+    
+    @n.setter
+    def n(self, new_n: int) -> None:
+        if  not isinstance(new_n, int):
+            raise TypeError('Not an integer')
+        self.__n = new_n
+    
+    @property
+    def bits(self) -> list[int]:
         return self.__bits
-
-    def set_bits(self, new_bits: list[int]) -> None:
+    
+    @bits.setter
+    def bits(self, new_bits: list[int]) -> None:
         self.__bits = new_bits
-
+    
+    # === Convertion ===
     def convert_to_base(self, b: int) -> str:
         """
         Converts the current integer in a specific base.
@@ -46,7 +55,7 @@ class BinaryConverter:
             >>> b.convert_to_base(16)
             'F'
         """
-        n: int = self.get_integer()
+        n: int = self.n
         remainders: list[int] = []
         while n / b != 0:
             remainders.append(n %  b)

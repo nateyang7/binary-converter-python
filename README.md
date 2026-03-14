@@ -14,9 +14,9 @@ focused on data encoding.
 ## Features
 ### Binary conversion
 - [X] Convert natural integers
-- [/] Convert integers in binary with two's complement method
-- [/] Convert real numbers with IEEE 754 with simple / double accuracy
-- [/] Convert complex numbers.
+- [ ] Convert integers in binary with two's complement method
+- [ ] Convert real numbers with IEEE 754 with simple / double accuracy
+- [ ] Convert complex numbers.
 
 ### Others
 - [X] Convert to octal format
