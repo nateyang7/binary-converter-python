@@ -1,4 +1,4 @@
-# Binary converter in Python
+# Binary converter
 
 ## Introduction
 **binary-converter-python** is a command-line utility designed to convert 
